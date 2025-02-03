@@ -1,0 +1,123 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css" rel="stylesheet">
+  <style>
+    .logo-container img {
+      max-width: 120px;
+      max-height: 120px;
+      object-fit: contain;
+    }
+    .sub-projects {
+      background-color: #f9f9f9;
+      border-top: 1px solid #e0e0e0;
+      padding: 15px;
+      display: none;
+    }
+    .large-project-card .toggle-sub-projects {
+      cursor: pointer;
+    }
+    .large-project-card .toggle-sub-projects:hover {
+      opacity: 0.7;
+    }
+    footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      margin-top: 30px;
+      text-align: center;
+    }
+    .nav-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .settings-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      color: var(--primary-color);
+    }
+    .settings-icon:hover {
+      transform: rotate(45deg);
+      color: var(--secondary-color);
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <header class="text-center py-4 position-relative">
+      <a href="settings.html" class="settings-icon">
+        <i data-feather="settings" width="24" height="24"></i>
+      </a>
+      <div class="logo-container">
+        <img src="logo.png" alt="Project Calculator Logo">
+        <h1 class="display-4 mt-2">Project Calculator</h1>
+      </div>
+      <div class="search-container mt-3">
+        <input type="text" class="form-control" id="projectSearch" placeholder="Search projects by name, date, or ID">
+      </div>
+      <div class="d-flex justify-content-center mt-3">
+        <div class="nav-actions">
+          <button id="createLargeProjectBtn" class="btn btn-success">
+            <i class="feather feather-plus"></i> New Large Project
+          </button>
+          <a href="project-calculator.html" class="btn btn-primary">
+            <i class="feather feather-plus"></i> New Project
+          </a>
+          <a href="project-sheets.html" class="btn btn-info">
+            <i class="feather feather-file-text"></i> Project Sheets
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="largeProjects" class="mt-4 container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h2>Large Projects</h2>
+        </div>
+        <div class="row" id="largeProjectsGrid">
+          <!-- Large Projects will be dynamically loaded here -->
+        </div>
+        <div id="noLargeProjectsMessage" class="text-center mt-4" style="display:none;">
+          <p class="text-muted">No large projects yet. Start a new project!</p>
+        </div>
+      </section>
+
+      <section id="individualProjects" class="mt-4 container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h2>Individual Projects</h2>
+        </div>
+        <div class="row" id="projectsGrid">
+          <!-- Individual Projects will be dynamically loaded here -->
+        </div>
+        <div id="noProjectsMessage" class="text-center mt-4" style="display:none;">
+          <p class="text-muted">No individual projects yet. Start a new project!</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p class="mb-1">Smart Design</p>
+        <p class="mb-1">Guergah Abdelghafour</p>
+        <p>+213673011534</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <script>
+    // Initialize Feather icons
+    feather.replace();
+  </script>
+  <script src="index.js"></script>
+</body>
+</html>

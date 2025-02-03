@@ -1,0 +1,22 @@
+{
+  "name": "Smart Design Project Calculator",
+  "short_name": "SmartDesign",
+  "description": "Project management and calculation app with Arabic language support",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#f4f6f7",
+  "theme_color": "#2c3e50",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
